@@ -4,4 +4,7 @@
     <string name="signature_text">from Kosm1n</string>
     <string name="button_happy">Wish a Happy</string>
     <string name="button_dice">Roll Dice</string>
+    <string name="dice_roller_button_roll">Roll</string>
+    <string name="dice_roller_button_back">Go Back</string>
+    <string name="dice_roller_text_view_result">*</string>
 </resources>

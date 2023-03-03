@@ -24,6 +24,10 @@
             android:name=".HappyBirthdayActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".DiceRollerActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

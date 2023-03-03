@@ -10,10 +10,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val rollButton: Button = findViewById(R.id.buttonHappyBirthday)
+        val happyButton: Button = findViewById(R.id.buttonHappyBirthday)
+        val diceRollerButton: Button = findViewById(R.id.buttonDiceRoller)
 
-        rollButton.setOnClickListener{
+        happyButton.setOnClickListener{
             val intent = Intent(this@MainActivity, HappyBirthdayActivity::class.java)
+            startActivity(intent)
+        }
+
+        diceRollerButton.setOnClickListener{
+            val intent = Intent(this@MainActivity, DiceRollerActivity::class.java)
             startActivity(intent)
         }
     }
