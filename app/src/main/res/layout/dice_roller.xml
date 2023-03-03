@@ -16,13 +16,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.804" />
 
     <TextView
         android:id="@+id/textViewResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="296dp"
+        android:layout_marginBottom="432dp"
         android:text="@string/dice_roller_text_view_result"
         android:textAlignment="center"
         android:textSize="96sp"
@@ -42,4 +42,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewResult"
         app:layout_constraintVertical_bias="0.935" />
+
+    <EditText
+        android:id="@+id/editTextLuckyNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="lucky number: [1..6]"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRoll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.641" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

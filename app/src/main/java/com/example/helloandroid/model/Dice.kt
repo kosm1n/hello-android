@@ -1,12 +1,9 @@
 package com.example.helloandroid.model
 
-class Dice {
-
-    var sides = 6
+class Dice (val numSides:Int) {
 
     fun roll(): Int {
-        val randomNumber = (1..6).random()
-        return randomNumber
+        return (1..numSides).random()
     }
 
 }
