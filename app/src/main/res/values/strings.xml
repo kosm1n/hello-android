@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">hello-android</string>
+    <string name="happy_birthday_text">Happy Birthday Midi!</string>
+    <string name="signature_text">from Kosm1n</string>
+    <string name="button_happy">Wish a Happy</string>
+    <string name="button_dice">Roll Dice</string>
 </resources>

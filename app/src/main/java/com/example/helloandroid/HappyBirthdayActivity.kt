@@ -5,15 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class HappyBirthdayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.happy_birthday)
 
         val rollButton: Button = findViewById(R.id.buttonHappyBirthday)
 
         rollButton.setOnClickListener{
-            val intent = Intent(this@MainActivity, HappyBirthdayActivity::class.java)
+            val intent = Intent(this@HappyBirthdayActivity, MainActivity::class.java)
             startActivity(intent)
         }
     }
