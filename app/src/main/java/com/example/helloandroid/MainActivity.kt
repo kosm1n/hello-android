@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         val happyButton: Button = findViewById(R.id.buttonHappyBirthday)
         val diceRollerButton: Button = findViewById(R.id.buttonDiceRoller)
+        val tipCalculatorButton: Button = findViewById(R.id.buttonCalculator)
 
         happyButton.setOnClickListener{
             val intent = Intent(this@MainActivity, HappyBirthdayActivity::class.java)
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
 
         diceRollerButton.setOnClickListener{
             val intent = Intent(this@MainActivity, DiceRollerActivity::class.java)
+            startActivity(intent)
+        }
+
+        tipCalculatorButton.setOnClickListener{
+            val intent = Intent(this@MainActivity, TipCalculatorActivity::class.java)
             startActivity(intent)
         }
     }
