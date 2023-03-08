@@ -26,8 +26,8 @@ class DiceRollerActivity : AppCompatActivity() {
 
         
 
-        buttonRoll.setOnClickListener() {
-            val myValue = editTextLuckyNumber.text;
+        buttonRoll.setOnClickListener {
+            val myValue = editTextLuckyNumber.text
             val diceRolled = myDice.roll()
             when (diceRolled) {
                 Integer.parseInt(myValue.toString()) -> {
@@ -67,7 +67,7 @@ class DiceRollerActivity : AppCompatActivity() {
                 }
             }
 
-            textViewResult.setText("${diceRolled}")
+            textViewResult.setText(diceRolled)
         }
 
 

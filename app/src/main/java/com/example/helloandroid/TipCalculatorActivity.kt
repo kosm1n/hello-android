@@ -1,13 +1,11 @@
 package com.example.helloandroid
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import com.example.helloandroid.databinding.ActivityMainBinding
+import androidx.appcompat.app.AppCompatActivity
 import com.example.helloandroid.databinding.TipCalculatorBinding
+import java.text.DecimalFormat
+import java.text.NumberFormat
 
 class TipCalculatorActivity : AppCompatActivity() {
 
@@ -19,7 +17,7 @@ class TipCalculatorActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.buttonCalculate.setOnClickListener{
-            binding.textViewTipCalculatorResult.text = calculateTip().toString()
+            binding.textViewTipCalculatorResult.text = NumberFormat.getCurrencyInstance().format(calculateTip())
         }
 
         binding.buttonGoBack.setOnClickListener{
@@ -30,19 +28,23 @@ class TipCalculatorActivity : AppCompatActivity() {
 
     private fun calculateTip(): Double {
         val stringInTextField = binding.editTextNumberDecimalCostOfService.text.toString()
-        val cost = stringInTextField.toDouble()
+        val cost = stringInTextField.toDoubleOrNull()
+        if (cost == null) {
+            binding.textViewTipCalculatorResult.text = ""
+            return 0.0
+        }
+
         val tipPercentage = when (binding.tipOptionsPercentage.checkedRadioButtonId) {
             R.id.option_twenty_percent -> 0.20
             R.id.option_eighteen_percent -> 0.18
             else -> 0.15
         }
-        var total = cost * (1+tipPercentage)
-        val roundUp = binding.switchRoundUpTip.isChecked
-        if (roundUp) {
-            total = kotlin.math.ceil(total)
+
+        if (binding.switchRoundUpTip.isChecked) {
+            return DecimalFormat("#.##").format(cost * (1+tipPercentage)).toDouble()
         }
 
-        return total
+        return cost * (1+tipPercentage)
     }
 
 }
