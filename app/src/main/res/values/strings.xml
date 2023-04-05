@@ -14,4 +14,7 @@
     <string name="radio_button_ok">Okay (15%)</string>
     <string name="button_calculate">Calculate</string>
     <string name="switch_round">Round Up Tip</string>
+
+    <string name="button_recycle">Recycle View</string>
+    <string name="button_recycle_go_to_main">Go to Main</string>
 </resources>

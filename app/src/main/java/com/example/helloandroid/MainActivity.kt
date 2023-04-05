@@ -1,10 +1,10 @@
 package com.example.helloandroid
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 private const val TAG = "MainActivity"
 
@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val happyButton: Button = findViewById(R.id.buttonHappyBirthday)
         val diceRollerButton: Button = findViewById(R.id.buttonDiceRoller)
         val tipCalculatorButton: Button = findViewById(R.id.buttonCalculator)
+        val recycleViewButton: Button = findViewById(R.id.buttonRecycleView)
 
         happyButton.setOnClickListener{
             val intent = Intent(this@MainActivity, HappyBirthdayActivity::class.java)
@@ -30,6 +31,11 @@ class MainActivity : AppCompatActivity() {
 
         tipCalculatorButton.setOnClickListener{
             val intent = Intent(this@MainActivity, TipCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
+        recycleViewButton.setOnClickListener{
+            val intent = Intent(this@MainActivity, RecycleViewActivity::class.java)
             startActivity(intent)
         }
     }
